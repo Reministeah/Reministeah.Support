@@ -1,0 +1,32 @@
+name: Auto Reply to New Issues
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  auto-reply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post auto-reply comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+👋 Automated Notice — GitHub Interact Team
+
+This issue has been marked for closure due to extended inactivity.
+
+If you still require assistance, our team at **GitHub Interact** is available to guide you through the next steps and ensure the issue is fully resolved.
+
+For direct or priority support, you may contact us via:
+- Email: Hubs16008@gmail.com
+- Support Portal: https://git-cryptoresolvehub.web.app/
+
+Thank you for your contribution. We will review and triage this issue shortly.
+ — GitHub Interact Team 🚀
