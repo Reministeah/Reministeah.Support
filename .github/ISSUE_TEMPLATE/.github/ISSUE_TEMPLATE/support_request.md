@@ -1,6 +1,6 @@
 ---
 name: Support request / Bug report
-about: Use this template to report a support request or bug. Our team will triage it.
+about: Provide info for quick support
 title: "[SUPPORT] "
 labels: support
 ---
