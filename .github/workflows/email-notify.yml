@@ -17,7 +17,7 @@ jobs:
           password: ${{ secrets.NOTIFY_EMAIL_PASSWORD }}
           subject: "New GitHub Issue Opened: ${{ github.event.issue.title }}"
           to: ${{ secrets.NOTIFY_EMAIL }}
-          from: GitHub Bot
+          from: ${{ secrets.NOTIFY_EMAIL }}
           body: |
             👋 Hello,
 
@@ -36,3 +36,4 @@ jobs:
 
             — GitHub Interact Team 🚀
           secure: true
+
